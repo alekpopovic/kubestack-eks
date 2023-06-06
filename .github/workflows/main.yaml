@@ -2,9 +2,9 @@ name: deploy
 on:
   push:
     branches:
-    - "**"  # run for branches
-    tags:
-    - "*"  # run for tags
+    - "main"  # run for branches
+    #tags:
+    #- "*"  # run for tags
 
 jobs:
   deploy:
