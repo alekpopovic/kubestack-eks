@@ -8,14 +8,6 @@ module "eks_gc0_eu-central-1_service_nginx" {
 
   configuration = {
     apps = {}
-    ops  = {
-      replicas = [{
-        # refers to the 'metadata.name' of the resource to scale
-        name = "nginx"
-
-        # sets the desired number of replicas
-        count = 1
-     }]
-    }
+    ops  = {}
   }
 }
