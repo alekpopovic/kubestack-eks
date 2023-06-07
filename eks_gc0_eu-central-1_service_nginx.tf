@@ -12,7 +12,7 @@ module "eks_gc0_eu-central-1_service_nginx" {
   }
 }
 
-module "eks_gc0_eu-west-1_dns_zone" {
+module "eks_gc0_eu-central-1_dns_zone" {
   providers = {
     aws        = aws.eks_gc0_eu-central-1
     kubernetes = kubernetes.eks_gc0_eu-central-1
@@ -24,5 +24,5 @@ module "eks_gc0_eu-west-1_dns_zone" {
   ingress_service_name      = "ingress-nginx-controller"
   ingress_service_namespace = "ingress-nginx"
 
-  metadata_fqdn = module.eks_gc0_eu-west-1.current_metadata["fqdn"]
+  metadata_fqdn = module.eks_gc0_eu-central-1.current_metadata["fqdn"]
 }
